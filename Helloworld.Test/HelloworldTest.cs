@@ -10,7 +10,8 @@ public class HelloworldTest
         Console.SetOut(writer);
 
         //Act
-        var program = Helloworld;
+        var program = Assembly.Load(nameof(Helloworld));
+        program.EntryPoint?.Invoke(null, new[] { Array.Empty<string>() });
 
         //Assert
         var output = writer.GetStringBuilder().ToString().TrimEnd();
