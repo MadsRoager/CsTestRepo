@@ -17,4 +17,10 @@ public class HelloworldTest
         var output = writer.GetStringBuilder().ToString().TrimEnd();
         output.Should().Be("Hello, World!");
     }
+
+    [Fact]
+    public void randomTest() 
+    {
+        
+    }
 }
