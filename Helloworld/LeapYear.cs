@@ -25,15 +25,6 @@ public class LeapYear {
     } else {
         Console.WriteLine("Error: That year is before 1582");
     }
-
-
-    int year = int.Parse(Console.ReadLine());
-    bool isLeapYear = leapYear.IsLeapYear(year);
-    if(isLeapYear) {
-        Console.WriteLine("yay");
-    } else {
-        Console.WriteLine("nay");
-    }
 }
     public bool IsLeapYear(int year) {
         if(year % 100 == 0) {
