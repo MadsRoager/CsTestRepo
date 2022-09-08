@@ -53,20 +53,4 @@ public class LeapYearTest
         leapYearBool.Should().Be(true);
         eightHundredBool.Should().Be(true);
     }
-
-    [Fact]
-    public void YearBefore1582() {
-        // Arrange
-        using var writer = new StringWriter();
-        Console.SetOut(writer);
-
-         // Act
-        LeapYear.Main(Array.Empty<string>());
-        writer.WriteLine("1581");
-        Console.WriteLine("1581");
-
-        // Assert
-        var output = writer.GetStringBuilder().ToString().TrimEnd();
-        output.Should().Be("Error: That year is before 1582");
-    }
 }
